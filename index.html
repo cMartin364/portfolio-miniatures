@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio de miniatures YouTube — Des miniatures qui captent l'attention</title>
+  <meta name="description" content="Portfolio de miniatures YouTube : des visuels percutants pour donner envie de cliquer.">
+  <meta name="theme-color" content="#070914">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%238b5cf6'/%3E%3Cpath d='M38 28l36 22-36 22z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <div class="bg-glow" aria-hidden="true">
+    <span class="glow glow-1"></span>
+    <span class="glow glow-2"></span>
+    <span class="glow glow-3"></span>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a href="#accueil" class="logo" aria-label="Retour à l'accueil">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M8 5l11 7-11 7z" fill="currentColor"/></svg>
+        </span>
+        <span class="logo-text" data-pseudo>TonPseudo</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== ACCUEIL ===== -->
+    <section class="hero" id="accueil">
+      <div class="container hero-inner">
+        <p class="eyebrow reveal">Miniatures YouTube sur mesure</p>
+        <h1 class="reveal">Des miniatures qui <span class="gradient-text">captent l'attention</span></h1>
+        <p class="hero-sub reveal">Des visuels percutants, pensés pour donner envie de cliquer et faire grandir ta chaîne.</p>
+        <div class="hero-actions reveal">
+          <a href="#portfolio" class="btn btn-primary" id="discoverBtn">Découvrir mes créations</a>
+        </div>
+      </div>
+      <a href="#portfolio" class="scroll-hint" aria-label="Descendre vers le portfolio"><span></span></a>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Portfolio</p>
+          <h2>Mes créations</h2>
+          <p class="section-sub">Clique sur une miniature pour l'agrandir.</p>
+        </header>
+
+        <p class="notice reveal" id="notice">
+          <span class="notice-badge">Exemples</span>
+          Les visuels ci-dessous sont des exemples temporaires. Ils seront remplacés par mes vraies miniatures.
+        </p>
+
+        <div class="gallery" id="gallery" aria-live="polite"></div>
+        <p class="empty" id="emptyMsg" hidden>Aucune miniature pour le moment.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> <span data-pseudo>TonPseudo</span>. Tous droits réservés.</p>
+      <a href="#accueil">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+  <!-- ===== APERCU AGRANDI ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu de la miniature" hidden>
+    <div class="lightbox-backdrop" data-close></div>
+    <figure class="lightbox-content">
+      <button class="lb-btn lb-close" id="lbClose" aria-label="Fermer l'aperçu">✕</button>
+      <button class="lb-btn lb-prev" id="lbPrev" aria-label="Miniature précédente">‹</button>
+      <button class="lb-btn lb-next" id="lbNext" aria-label="Miniature suivante">›</button>
+      <img id="lbImg" src="" alt="">
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
